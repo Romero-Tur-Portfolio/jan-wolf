@@ -1,0 +1,12 @@
+{
+    "name": "acf/creative-block",
+    "title": "Sonderkreativelement",
+    "description": "Sonderkreativelement mit Bild, Überschrift, Teaser-Text, Excerpt-Text, und Link",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["kreativ", "bild", "teaser-bild", "teaser", "teaser-text", "excerpt", "sonderkreative", "creative", "special"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "creative-block.php"
+    }
+}

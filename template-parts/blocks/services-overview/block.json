@@ -1,0 +1,12 @@
+{
+    "name": "acf/services-overview",
+    "title": "Leistungskacheln (3 in Reihe)",
+    "description": "Kacheln mit Leistungen / Übersicht der Leistungen",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["tile", "kachel", "leistungen", "services", "overview", "übersicht"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "services-overview.php"
+    }
+}

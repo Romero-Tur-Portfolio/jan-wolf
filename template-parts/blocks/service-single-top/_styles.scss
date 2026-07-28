@@ -1,0 +1,46 @@
+.section.service-single-top {    
+    .section__container {
+        @include forContainers;
+    }
+
+    .pictogramm {
+        img {
+            width: calc(100% + 10%);
+            margin-left: 10%;
+        }
+    }
+}
+
+@media screen and (min-width: $xl) {
+    .section.service-single-top {
+        .pictogramm {
+            img {
+                width: calc(100% + 15%);
+                margin-left: 10%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $xl) {
+    .section.service-single-top {
+        .pictogramm {
+            img {
+                width: calc(100% + 27%);
+                margin-left: 0%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $xxxl) {
+    .section.service-single-top {
+        .pictogramm {
+            img {
+                width: calc(100% + 27%);
+                margin-left: 18%;
+            }
+        }
+    }
+}

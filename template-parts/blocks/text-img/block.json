@@ -1,0 +1,12 @@
+{
+    "name": "acf/text-img",
+    "title": "Text/Bild",
+    "description": "Abschnitt mit Text und Bild",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["text", "text mit bild", "bild und text", "bild"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-img.php" 
+    }
+}  

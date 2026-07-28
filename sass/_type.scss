@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: 'Butler';
+    src: url('../fonts/ButlerStencil.woff') format('woff');
+    src: url('../fonts/ButlerStencil.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Acre';
+    src: url('../fonts/Acre.woff') format('woff');
+}
+
+@mixin paragraph {
+    font-size: 18px;
+    line-height: 1.33em;
+}
+
+@mixin heading-xl {
+    font-size: calc(clamp(2.625rem, 6.264vw + 1.372rem, 4.375rem)); //42 (320) - 70 (767)
+    line-height: 1.17em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+@mixin heading-lg {
+    font-size: calc(clamp(2.563rem, 1.786vw + 2.205rem, 3.063rem)); // 41 (320) - 49 (1920)
+    line-height: 1.17em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+@mixin heading-md {
+    font-size: calc(clamp(1.938rem, 1.342vw + 1.669rem, 2.313rem)); // 31 (320) - 37 (767)
+    line-height: 1.2em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+@mixin heading-sm {
+    font-size: calc(clamp(1.125rem, 3.803vw + 0.364rem, 2.188rem)); // 23 (320) - 35 (767)
+    text-transform: uppercase;
+    line-height: 1.25em;
+    margin-bottom: 0px;
+}
+
+$heading-mb-lg: calc(clamp(1.063rem, 0.5vw + 0.963rem, 1.563rem));          // margin-bottom: 17px - 25px
+$heading-mb-md: calc(clamp(0.938rem, 0.313vw + 0.875rem, 1.25rem));         // margin-bottom: 15px - 20px
+$heading-mt-md: calc(clamp(1.875rem, 0.313vw + 1.813rem, 2.188rem));        // margin-top: 30px - 32px
+$heading-mt-lg: calc(clamp(1.25rem, 0.938vw + 1.063rem, 2.188rem));         //20px - 35px
+
+.heading-xl {
+    @include heading-xl;
+}
+
+.heading-lg {
+    @include heading-lg;
+}
+
+.heading-md {
+    @include heading-md;
+}
+
+.heading-sm {
+    @include heading-sm;
+}
+
+.heading-mb-lg {
+    margin-bottom: $heading-mb-lg;
+}
+
+.heading-mb-md {
+    margin-bottom: $heading-mb-md;
+}
+
+
+@media screen and (min-width: $md){
+    .heading-xl {
+        font-size: calc(clamp(2.563rem, 1.649vw + 1.771rem, 3.75rem));
+    }
+
+    .heading-lg {
+        font-size: calc(clamp(2.563rem, 1.649vw + 1.771rem, 3.75rem));
+    }
+
+    .heading-md {
+        font-size: calc(clamp(2.313rem, 1.128vw + 1.771rem, 3.125rem)); // 37 (768) - 50 (1920)
+    }
+
+    .heading-sm {
+        font-size: calc(clamp(1.125rem, 0.868vw + 0.708rem, 1.75rem));
+    }
+}

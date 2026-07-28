@@ -1,0 +1,187 @@
+.section.contact-section {
+    .section__container {
+        @include forContainers;
+    }
+
+    form {
+        span {
+            display: block;
+        }
+
+        .wpcf7-not-valid-tip {
+            font-size: 0.75em;
+            line-height: 1em;
+            padding: 0 2rem 1rem;
+        }
+
+        .field-wrap {
+            position: relative;
+
+            &:before {
+                content: ' ';
+                position: absolute;
+                display: block;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                height: 1rem;
+                
+                border: {
+                    top: 1px solid $blue;
+                    left: 1px solid $blue;
+                    right: 1px solid $blue;
+                }
+            }
+
+            &::before {
+                content: ' ';
+                position: absolute;
+                display: block;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                height: 1rem;
+                
+                border: {
+                    top: 1px solid $blue;
+                    left: 1px solid $blue;
+                    right: 1px solid $blue;
+                }
+            }
+
+            &:after {
+                content: ' ';
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1rem;
+                
+                border: {
+                    bottom: 1px solid $blue;
+                    left: 1px solid $blue;
+                    right: 1px solid $blue;
+                }
+            }
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1rem;
+                
+                border: {
+                    bottom: 1px solid $blue;
+                    left: 1px solid $blue;
+                    right: 1px solid $blue;
+                }
+            }
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        textarea {
+            width: 100%;
+            padding: 1rem 2rem;
+            border: 0px;
+            position: relative;
+            display: block;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            color: inherit;
+
+            &::placeholder {
+                text-transform: uppercase;
+                color: #9c9c9c;
+            }
+        }
+
+        textarea {
+            height: 196px;
+        }
+
+        .acceptance {
+            display: flex;
+
+            &__text {
+                font-size: 0.75em;
+                line-height: 1.35em;
+            }
+
+            .wpcf7-list-item {
+                margin-left: 0;
+                margin-right: 1.5em;
+            }
+
+            input[type=checkbox]{
+                appearance: none;
+                -webkit-appearance: none;
+                width: 1.5em;
+                height: 1.5em;
+                border: 1px solid $blue;
+
+                &:checked {
+                    background-image: url('../img/check-blue.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 80% auto;
+                }
+            }
+        }
+
+        .submit {
+            text-transform: uppercase;
+            color: inherit;
+            padding: 0.5em 0;
+            padding-right: 4rem;
+            display: inline-flex;
+            align-items: center;
+            height: 1em;
+            line-height: 1em;
+            width: max-content;
+            font-size: inherit;
+            height: auto;
+            border: 0px;
+            background-color: transparent;
+            transition: background-position 0.2s;
+
+            background-image: url('../img/btn_arrow-blue.svg');
+            background-repeat: no-repeat !important;
+            background-position: top 50% right 1rem !important;
+            background-size: auto 1em !important;
+        }
+
+        &.wpcf7-form.init,
+        &.wpcf7-form.sent {
+            .submit {
+
+                &:hover {
+                    background-position: top 50% right 0rem !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $md){
+    .section.contact-section {
+        form {
+            .submit {
+                margin-top: -0.5em;
+            }
+            textarea {
+                height: 128px;
+            }
+        }
+    }
+}
+
+
+

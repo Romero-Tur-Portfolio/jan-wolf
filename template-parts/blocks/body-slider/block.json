@@ -1,0 +1,12 @@
+{
+    "name": "acf/body-slider",
+    "title": "Body-Slider",
+    "description": "Innen-Slider der Seite",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["slider", "body slider", "mitte", "innen", "innen-slider"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "body-slider.php"
+    }
+}

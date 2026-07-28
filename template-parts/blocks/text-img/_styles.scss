@@ -1,0 +1,36 @@
+.section.text-img {
+
+    .section__container {
+        @include forContainers;
+    }
+
+    h2 {
+        @include heading-preset;
+        font-size: $global-h2-size;
+        margin-bottom: $global-h2-margin-bottom;
+    }
+
+    h1 {
+        @include heading-preset;
+        font-size: $global-h2-size;
+        margin-bottom: $global-h2-margin-bottom;
+    }
+
+    .img-content {
+
+        img {
+            width: 100%;
+            height: auto;
+        } 
+    }
+
+    .text-content {
+
+        p {
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

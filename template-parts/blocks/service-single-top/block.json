@@ -1,0 +1,12 @@
+{
+    "name": "acf/service-single-top",
+    "title": "Service-Single-Top",
+    "description": "Top-Teil von Service-Single-Seite",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["top", "kopf", "leistung", "service", "single", "head"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "service-single-top.php"
+    }
+}

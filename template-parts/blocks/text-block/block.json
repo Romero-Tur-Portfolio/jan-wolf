@@ -1,0 +1,12 @@
+{
+    "name": "acf/text-block",
+    "title": "Text-Block",
+    "description": "Abschnitt mit Text",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["text"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-block.php"
+    }
+}

@@ -1,0 +1,23 @@
+@import 'vars_+_grids.scss';
+@import 'swatches_+_colors.scss';
+@import 'type.scss';
+@import 'misc.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import '../template-parts/blocks/creative-block/styles.scss';
+@import '../template-parts/blocks/heading-aside-text/styles.scss';
+@import '../template-parts/blocks/head-slider/styles.scss';
+@import '../template-parts/blocks/body-slider/styles.scss';
+@import '../template-parts/blocks/contact-section/styles.scss';
+@import '../template-parts/blocks/overview-page-top/styles.scss';
+@import '../template-parts/blocks/services-overview/styles.scss';
+@import '../template-parts/blocks/service-single-top/styles.scss';
+@import '../template-parts/blocks/services-tiles-block/styles.scss';
+@import '../template-parts/blocks/text-block/styles.scss';
+@import '../template-parts/blocks/text-contact/styles.scss';
+@import '../template-parts/blocks/text-bio-img/styles.scss';
+
+body {
+    font-family: 'Acre', 'sans-serif';
+    @include paragraph;
+}

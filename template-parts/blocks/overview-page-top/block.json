@@ -1,0 +1,12 @@
+{
+    "name": "acf/overview-page-top",
+    "title": "Deckblatt-Top",
+    "description": "Top-Teil von Deckblatt-Seite",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["top", "kopf", "deckblatt", "overview", "head"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "overview-page-top.php"
+    }
+}

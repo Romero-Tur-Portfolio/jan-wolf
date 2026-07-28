@@ -1,0 +1,12 @@
+{
+    "name": "acf/services-tiles-block",
+    "title": "Leistungskacheln (2 in Reihe)",
+    "description": "Block mit Leistungs-Kreativelemente in Kacheln-Form",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["service", "leistung", "kacheln", "tiles", "kreativ", "creative"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "services-tiles-block.php" 
+    }
+}  

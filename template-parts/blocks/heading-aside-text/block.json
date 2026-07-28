@@ -1,0 +1,12 @@
+{
+    "name": "acf/heading-aside-text",
+    "title": "Überschrift-seitlich und Text",
+    "description": "Abschnitt mit Überschrift an der Seite und Text",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["heading", "text", "seitlich", "schriftzug", "überschrift", "aside"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "heading-aside-text.php"
+    } 
+}

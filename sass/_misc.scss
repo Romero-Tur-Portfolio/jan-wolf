@@ -1,0 +1,82 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+.anchor-bar {
+    position: absolute;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: inherit;
+    padding: 0.5em 0;
+    display: inline-flex;
+    align-items: center;
+    height: 1em;
+    width: max-content;
+    font-size: inherit;
+    height: auto;
+
+    .arrow {
+        width: 1.8em;
+        height: 1em;
+        margin-left: 1.5em;
+        background-repeat: no-repeat !important;
+        background-position: right !important;
+        background-size: auto 100% !important;
+
+        transition: margin-left 0.2s;
+    }
+
+    &:hover {
+        color: inherit;
+        .arrow {
+            margin-left: 2.5em;
+        }
+    }
+}
+
+.bg-white {
+    .btn {
+        .arrow {
+            background-image: url('../img/btn_arrow-blue.svg');
+        }
+    }
+}
+
+.bg-blue {
+    .btn {
+        .arrow {
+            background-image: url('../img/btn_arrow-white.svg');
+        }
+    }
+}
+
+.border-right {
+    border-right: 1px solid $white;
+}
+
+@media screen and (min-width: $md) {
+    .border-right-md {
+        border-right: 1px solid $white;
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .border-right-lg {
+        border-right: 1px solid $white;
+    }
+}
+
+@media screen and (min-width: $xl) {
+    .border-right-xl {
+        border-right: 1px solid $white;
+    }
+    .border-right-xl-none {
+        border-right: 0px;
+    }
+    .border-bottom-xl {
+        border-bottom: 1px solid;
+    }
+}

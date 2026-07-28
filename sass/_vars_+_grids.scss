@@ -1,0 +1,145 @@
+
+:root{
+    --bx-gutter-x: 1.5rem;
+    --bs-guter-y: 0;
+}
+
+$gutter-x: 1.5rem;
+$fhd-width: 1920px;
+
+@mixin forRowPaddings {
+    padding-left: calc($gutter-x*.5);
+    padding-right: calc($gutter-x*.5);
+}
+
+@mixin forContainers {
+    @include forRowPaddings;
+    max-width: $fhd-width;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+$prevalues: (
+    0: 0rem,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 3rem
+);
+ 
+$widths: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1650px
+);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1650px;
+
+@for $i from 6 through 14 {
+    .ps-#{$i} {
+        $value: $i - 2;
+        padding-left: #{$value}rem !important;
+    }
+    .pe-#{$i} {
+        $value: $i - 2;
+        padding-right: #{$value}rem !important;
+    }
+    .pb-#{$i} {
+        $value: $i - 2;
+        padding-bottom: #{$value}rem !important;
+    }
+    .mt-#{$i} {
+        $value: $i - 2;
+        margin-top: #{$value}rem !important;
+    }
+    .mb-#{$i} {
+        $value: $i - 2;
+        margin-bottom: #{$value}rem !important;
+    }
+}
+
+@each $step, $value in $prevalues {
+    .msn-#{$step} {
+        margin-left: #{-$value} !important;
+    }
+    .men-#{$step} {
+        margin-right: #{-$value} !important;
+    }
+}
+
+@each $width, $value in $widths {
+    @media screen and ( min-width: $value ) {
+
+        @for $i from 6 through 14 {
+            .ps-#{$width}-#{$i} {
+                $value: $i - 2;
+                padding-left: #{$value}rem !important;
+            }
+            .pe-#{$width}-#{$i} {
+                $value: $i - 2;
+                padding-right: #{$value}rem !important;
+            }
+            .pt-#{$width}-#{$i} {
+                $value: $i - 2;
+                padding-top: #{$value}rem !important;
+            }
+            .pb-#{$width}-#{$i} {
+                $value: $i - 2;
+                padding-bottom: #{$value}rem !important;
+            }
+            .mt-#{$width}-#{$i} {
+                $value: $i - 2;
+                margin-top: #{$value}rem !important;
+            }
+            .mb-#{$width}-#{$i} {
+                $value: $i - 2;
+                margin-bottom: #{$value}rem !important;
+            }
+            .mtn-#{$width}-#{$i} {
+                $value: $i - 2;
+                margin-top: #{-$value}rem !important;
+            }
+            .mbn-#{$width}-#{$i} {
+                $value: $i - 2;
+                margin-bottom: #{-$value}rem !important;
+            }
+            .msn-#{$width}-#{$i} {
+                $value: $i - 2;
+                margin-left: #{-$value}rem !important;
+            }
+            .men-#{$width}-#{$i} {
+                $value: $i - 2;
+                margin-right: #{-$value}rem !important;
+            }
+        }
+
+        @each $step, $value in $prevalues {
+            .msn-#{$width}-#{$step} {
+                margin-left: #{-$value} !important;
+            }
+
+            .men-#{$width}-#{$step} {
+                margin-right: #{-$value} !important;
+            }
+
+            .mb-#{$width}-#{$step} {
+                margin-bottom: #{$value} !important;
+            }
+
+            .mbn-#{$width}-#{$step} {
+                margin-bottom: #{-$value} !important;
+            }
+        }       
+    }
+}
+

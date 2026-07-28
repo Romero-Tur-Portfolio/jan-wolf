@@ -1,0 +1,20 @@
+.section.creative-block {    
+    .section__container {
+        @include forContainers;
+    }
+
+    .main-img {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .alt-img {
+        position: absolute;
+        top: 0;
+        left: -60px;
+    }
+}

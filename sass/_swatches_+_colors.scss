@@ -1,0 +1,71 @@
+$white: #fff;
+$blue: #465564;
+$gray: #ededed;
+
+@mixin color-blue {
+    color: $blue;
+    
+    p {
+        color: $blue;
+    }
+    a {
+        color: $blue;
+    }
+}
+
+@mixin color-white {
+    color: $white;
+
+    p {
+        color: $white;
+    }
+    a {
+        color: $white;
+    }
+}
+
+@mixin bg-blue {
+    background-color: $blue;
+}
+
+@mixin bg-white {
+    background-color: $white;
+}
+
+.bg-blue {
+    @include bg-blue;
+    @include color-white;
+}
+
+.bg-white {
+    @include bg-white;
+    @include color-blue;
+}
+
+.color-white {
+    @include color-white;
+}
+
+.color-blue {
+    @include color-blue;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+@each $res, $val in $widths {
+    @media screen and (min-width: #{$val}) {
+        .bg-#{$res}-blue {
+            @include bg-blue;
+            @include color-white;
+        }
+        .bg-#{$res}-white {
+            @include bg-white;
+            @include color-blue;
+        }
+        .bg-#{$res}-transparent {
+            background-color: transparent !important;
+        }
+    }
+}

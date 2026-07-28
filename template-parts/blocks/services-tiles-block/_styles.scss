@@ -1,0 +1,111 @@
+.section.services-tiles-block {
+
+    .section__container {
+        @include forContainers;
+    }
+
+    .service-tile {
+        position: relative;
+
+        .odd-tile-border {
+            display: none;
+            position: absolute;
+            right: 0;
+            border-right: 1px solid $blue;
+            top: 0;
+            bottom: 0;
+        }
+
+        .odd-tile-border--first {
+            bottom: 0;
+            top: 10%;
+        }
+
+        .odd-tile-border--last {
+            top: 0;
+            bottom: 10%;
+        }
+
+        &-wrap {
+            
+        }
+
+        &__text-content {
+            &__number {
+                font-family: 'Butler', serif;
+                line-height: 1em;
+                margin-right: calc(clamp(1.25rem, 3.356vw + 0.579rem, 2.188rem)); // 20 (320) - 35 (767)
+            }
+
+            &__text {
+
+            }
+        }
+
+        &__img-content {
+            position: relative;
+
+            .alt-img {
+                position: absolute;
+                bottom: 0;
+                height: 85%;
+                left: 0;
+                width: auto;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                opacity: 0;
+
+                transition-property: opacity, height;
+                transition-duration: 0.2s, 0.2s;
+                transition-timing-function: ease-in-out, linear;
+
+                img {
+                    position: relative;
+                    width: auto;
+                    height: auto;
+                    max-height: 100%;
+                }
+            }
+
+            &:hover {
+                .alt-img {
+                    opacity: 0.5;
+                    height: 100%;
+                }
+            }
+        }
+    }    
+
+    img {
+        width: 100%;
+        height: auto;
+    }    
+}
+
+@media screen and (min-width: $md) {
+    .section.services-tiles-block {
+        .service-tile {
+            &__text-content {
+                &__number {
+                    margin-right: calc(clamp(1.188rem, 1.823vw + 0.313rem, 2.5rem));
+                }
+    
+                &__text {
+    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $xl) {
+    .section.services-tiles-block {
+        .service-tile {
+            .odd-tile-border {
+                display: block;
+            }
+        }
+    }
+}

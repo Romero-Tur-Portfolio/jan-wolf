@@ -1,0 +1,12 @@
+{
+    "name": "acf/contact-section",
+    "title": "Kontakt-Abschnitt",
+    "description": "Abschnitt mit Kontakt-Formular",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["contact", "kontakt", "form", "input", "formular", "mail"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "contact-section.php"
+    }
+}

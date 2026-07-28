@@ -1,0 +1,51 @@
+.section.services-overview {
+    .section__container {
+        @include forContainers;
+    }
+
+    ul.dot {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0px;
+        margin: 0px;
+
+        li {
+            list-style-type: none;
+            width: 15%;
+            box-sizing: border-box;
+            margin: 5px;
+            
+            button {
+                font-size: 0px;
+                line-height: 0px;
+                height: 2px;
+                border: 0px;
+                background-color: $blue;
+                width: 100%;
+            }
+        }
+    }
+
+    .service-tile {
+        .service-tile__number {
+            font-family: 'Butler', serif;            
+            line-height: 1em;
+            margin-right: calc(clamp(1.25rem, 3.356vw + 0.579rem, 2.188rem));
+        }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .section.services-overview {
+        .service-tile {
+            & > div {
+                border-right: 1px solid $blue;
+            }
+
+            .service-tile__number {
+                margin-right: 0px;
+            }
+        }
+    }
+}

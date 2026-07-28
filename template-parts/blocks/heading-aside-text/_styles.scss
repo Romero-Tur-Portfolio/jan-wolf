@@ -1,0 +1,43 @@
+.section.heading-aside-text {
+
+    .section__container {
+        @include forContainers;
+    }
+
+    .text-content {
+        p {
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .two-cols {
+
+    }
+}
+
+@media screen and (min-width: $md){
+    .two-cols {
+        column-count: 2;
+        column-gap: 3rem;
+    }
+}
+
+@media screen and (min-width: $xl){
+    .two-cols {
+        column-gap: 4rem;
+    }
+}
+
+@media screen and (min-width: $xxl){
+    .two-cols {
+        column-gap: 5rem;
+    }
+}
+
+@media screen and (min-width: $xxxl){
+    .two-cols {
+        column-gap: 7rem;
+    }
+}

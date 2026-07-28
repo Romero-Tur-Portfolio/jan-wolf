@@ -1,0 +1,85 @@
+.section.head-slider {
+    .section__container {
+        @include forContainers;
+    }
+
+    .avis {
+        position: relative;
+        max-width: 400px;
+
+        .avis__btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border: 0px;
+            background-image: url('../img/close.svg');
+            background-repeat: no-repeat;
+            background-size: 1em auto;
+            background-position: center;
+            width: 2.5em;
+            height: 2.5em;
+            padding: 0px;
+        }
+    }
+
+    ul.dot {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0px;
+        margin: 0px;
+
+        li {
+            list-style-type: none;
+            width: calc(clamp(1.5rem, 3.579vw + 0.784rem, 2.5rem));
+            box-sizing: border-box;
+            margin: {
+                top: 0px;
+                bottom: 0px;
+                left: clamp(0.813rem, 1.119vw + 0.589rem, 1.125rem);
+                right: clamp(0.813rem, 1.119vw + 0.589rem, 1.125rem);
+            }
+            display: inline-block;
+            
+            button {
+                font-size: 0px;
+                line-height: 0px;
+                border: 0px;
+                background-color: transparent;
+                width: 100%;
+                height: 2rem;
+                display: block;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $blue;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &.slick-active {
+                opacity: 0.35;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $md){
+    .section.head-slider {
+
+        ul.dot {
+            li {
+                width: calc(clamp(1.563rem, 3.038vw + 0.104rem, 3.75rem));
+                margin-left: calc(clamp(0.625rem, 0.868vw + 0.208rem, 1.25rem));
+                margin-right: calc(clamp(0.625rem, 0.868vw + 0.208rem, 1.25rem));
+            }
+        }
+    }
+}

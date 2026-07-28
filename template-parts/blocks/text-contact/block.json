@@ -1,0 +1,12 @@
+{
+    "name": "acf/text-contact",
+    "title": "Text-Kontakt",
+    "description": "Abschnitt mit Text und Kontaktformular",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["text", "contact", "kontakt"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-contact.php"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "acf/head-slider",
+    "title": "Kopf-Slider",
+    "description": "Slider am Kopf der Seite",
+    "category": "formatting",
+    "icon": "editor-paste-text",
+    "keywords": ["slider", "head slider", "top slider"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "head-slider.php"
+    }
+}

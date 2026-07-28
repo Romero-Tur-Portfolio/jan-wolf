@@ -1,0 +1,26 @@
+.section.overview-page-top {    
+    .section__container {
+        @include forContainers;
+    }
+
+    .text-content {
+        p:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    .pictogramm {
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .section.overview-page-top {
+        .pictogramm {
+            img {
+                margin-left: -15%;
+                width: calc(100% + 15%);
+            }
+        }
+    }
+}
